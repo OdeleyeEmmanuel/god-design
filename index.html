@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="GOD DESIGN is a Nigerian fashion brand creating streetwear and corporate wear inspired by biblical scripture. Shop streetwear, suits, shirts and trousers. Message for price.">
+<title>GOD DESIGN | Biblical Expression Through Fashion</title>
+<style>
+:root{--ink:#101010;--paper:#f5f2eb;--lime:#c9f24a;--muted:#777;--line:#d9d5cc}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;z-index:50;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:18px 5vw;mix-blend-mode:difference;color:white}
+.navlogo{font-weight:900;letter-spacing:.18em;font-size:13px}
+.navlinks{display:flex;gap:28px;font-size:12px;text-transform:uppercase;letter-spacing:.14em}
+.hero{min-height:100svh;display:grid;place-items:center;padding:120px 5vw 70px;position:relative;overflow:hidden;background:#111;color:white}
+.hero:before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 65% 35%,#334400 0,transparent 35%),radial-gradient(circle at 25% 80%,#292929 0,transparent 38%);animation:drift 12s ease-in-out infinite alternate}
+@keyframes drift{to{transform:scale(1.08) translate3d(2%, -2%,0)}}
+.hero-inner{position:relative;z-index:1;width:min(1200px,100%);text-align:center}
+.logo{width:min(180px,42vw);height:auto;filter:invert(1);margin-bottom:30px;mix-blend-mode:screen}
+.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.28em;color:#d7d7d7;margin-bottom:18px}
+h1{font-size:clamp(58px,13vw,190px);line-height:.78;letter-spacing:-.08em;text-transform:uppercase}
+.hero p{max-width:620px;margin:28px auto 0;color:#bdbdbd;font-size:clamp(15px,2vw,20px);line-height:1.6}
+.cta{display:inline-flex;margin-top:34px;border:1px solid #777;padding:14px 20px;text-transform:uppercase;letter-spacing:.14em;font-size:11px;transition:.35s}
+.cta:hover{background:var(--lime);color:#111;border-color:var(--lime);transform:translateY(-3px)}
+.marquee{overflow:hidden;background:var(--lime);color:#111;border-bottom:1px solid #111;white-space:nowrap}
+.marquee-track{display:inline-block;padding:16px 0;font-weight:900;text-transform:uppercase;letter-spacing:.18em;animation:marquee 18s linear infinite}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.section{padding:110px 5vw}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:45px}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.22em;color:var(--muted);margin-bottom:14px}
+h2{font-size:clamp(44px,8vw,105px);letter-spacing:-.07em;line-height:.85;text-transform:uppercase}
+.intro{max-width:410px;font-size:17px;line-height:1.65;color:#444}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:white;border:1px solid var(--line);overflow:hidden}
+.photo{aspect-ratio:4/5;overflow:hidden;background:#ddd}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .5s}
+.card:hover img{transform:scale(1.07);filter:saturate(1.08)}
+.card-meta{display:flex;justify-content:space-between;gap:15px;padding:16px;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.card-meta strong{font-weight:700}
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:70vh}
+.split > div{padding:80px 6vw;display:flex;flex-direction:column;justify-content:space-between}
+.dark{background:#111;color:#fff}
+.lime{background:var(--lime);color:#111}
+.bigword{font-size:clamp(70px,11vw,170px);line-height:.78;letter-spacing:-.08em;font-weight:900;text-transform:uppercase}
+.scripture{padding:130px 5vw;background:#111;color:white;text-align:center}
+.scripture blockquote{font-size:clamp(34px,6vw,82px);line-height:1;letter-spacing:-.055em;max-width:1000px;margin:auto}
+.scripture cite{display:block;margin-top:30px;font-style:normal;color:#aaa;font-size:12px;text-transform:uppercase;letter-spacing:.2em}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.contact-copy p{font-size:18px;line-height:1.7;color:#555;max-width:560px}
+.contact-list{margin-top:30px;display:grid;gap:12px;font-size:14px}
+form{display:grid;gap:12px}
+input,textarea{width:100%;padding:18px;border:1px solid #bbb;background:transparent;font:inherit;outline:none}
+textarea{min-height:150px;resize:vertical}
+button{border:0;background:#111;color:#fff;padding:18px;text-transform:uppercase;letter-spacing:.15em;font-weight:800;cursor:pointer;transition:.3s}
+button:hover{background:var(--lime);color:#111}
+footer{padding:25px 5vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:11px;text-transform:uppercase;letter-spacing:.12em}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+.cursor{position:fixed;width:18px;height:18px;border:1px solid #fff;border-radius:50%;pointer-events:none;z-index:100;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:width .2s,height .2s}
+@media(max-width:1050px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:800px){
+ .navlinks{gap:12px;font-size:9px}
+ .grid{grid-template-columns:1fr 1fr}
+ .split,.contact{grid-template-columns:1fr}
+ .split > div{min-height:48vh}
+ .section{padding:80px 5vw}
+ .section-head{display:block}
+ .intro{margin-top:25px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.navlinks a:nth-child(2){display:none}footer{display:block;line-height:2}}
+</style>
+
+<!-- GOD DESIGN SEO -->
+<link rel="canonical" href="https://odeleyeemmanuel.github.io/god-design/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#111111">
+<meta name="author" content="GOD DESIGN">
+<meta name="keywords" content="GOD DESIGN, Nigerian fashion brand, Nigerian streetwear, Nigerian corporate wear, streetwear Nigeria, suits Nigeria, shirts Nigeria, baggy jeans Nigeria, faith fashion, Christian fashion, biblical fashion, clothing brand Nigeria, fashion Ibadan, fashion Nigeria">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GOD DESIGN">
+<meta property="og:title" content="GOD DESIGN | Biblical Expression Through Fashion">
+<meta property="og:description" content="GOD DESIGN creates streetwear and corporate fashion in Nigeria, portraying biblical scriptures through clothing.">
+<meta property="og:url" content="https://odeleyeemmanuel.github.io/god-design/">
+<meta property="og:image" content="https://odeleyeemmanuel.github.io/god-design/logo.jpg">
+<meta property="og:image:alt" content="GOD DESIGN logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GOD DESIGN | Biblical Expression Through Fashion">
+<meta name="twitter:description" content="Streetwear and corporate fashion from Nigeria, inspired by biblical scripture.">
+<meta name="twitter:image" content="https://odeleyeemmanuel.github.io/god-design/logo.jpg">
+<meta name="twitter:image:alt" content="GOD DESIGN logo">
+<meta name="application-name" content="GOD DESIGN">
+<meta name="apple-mobile-web-app-title" content="GOD DESIGN">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://odeleyeemmanuel.github.io/god-design/sitemap.xml">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://odeleyeemmanuel.github.io/god-design/#organization",
+      "name": "GOD DESIGN",
+      "url": "https://odeleyeemmanuel.github.io/god-design/",
+      "logo": "https://odeleyeemmanuel.github.io/god-design/logo.jpg",
+      "description": "A Nigerian fashion brand portraying biblical scriptures through streetwear and corporate fashion.",
+      "telephone": "+2348074229832",
+      "sameAs": ["https://odeleyeemmanuel.github.io/"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://odeleyeemmanuel.github.io/god-design/#website",
+      "url": "https://odeleyeemmanuel.github.io/god-design/",
+      "name": "GOD DESIGN",
+      "description": "Biblical expression through fashion. Streetwear and corporate wear from Nigeria.",
+      "publisher": {"@id": "https://odeleyeemmanuel.github.io/god-design/#organization"}
+    },
+    {
+      "@type": "ClothingStore",
+      "@id": "https://odeleyeemmanuel.github.io/god-design/#store",
+      "name": "GOD DESIGN",
+      "url": "https://odeleyeemmanuel.github.io/god-design/",
+      "description": "Streetwear and corporate clothing from Nigeria inspired by biblical scripture.",
+      "telephone": "+2348074229832",
+      "image": "https://odeleyeemmanuel.github.io/god-design/logo.jpg",
+      "priceRange": "Message for price",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Nigeria"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<nav>
+  <a class="navlogo" href="#top">GOD DESIGN</a>
+  <div class="navlinks">
+    <a href="#streetwear">Streetwear</a>
+    <a href="#corporate">Corporate</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <img class="logo" src="logo.jpg" alt="GOD DESIGN Nigerian fashion brand logo">
+    <div class="kicker">Nigeria · Faith · Fashion</div>
+    <h1>Scripture<br>in Style.</h1>
+    <p>Literally portraying biblical scriptures through streetwear and corporate fashion.</p>
+    <a class="cta" href="#streetwear">Explore the collection</a>
+  </div>
+</header>
+
+
+<section class="section reveal" aria-label="About GOD DESIGN">
+  <div class="section-head">
+    <div><div class="eyebrow">GOD DESIGN · Nigeria</div><h2>Faith<br>in fashion.</h2></div>
+    <p class="intro">GOD DESIGN is a Nigerian clothing brand creating expressive streetwear and refined corporate wear. From relaxed everyday looks to suits, shirts and trousers, every collection is designed around the idea of carrying faith with confidence.</p>
+  </div>
+</section>
+
+<div class="marquee"><div class="marquee-track">Faith in every thread. &nbsp; Faith in every thread. &nbsp; Faith in every thread. &nbsp; Faith in every thread. &nbsp;</div></div>
+
+<section class="section" id="streetwear">
+  <div class="section-head">
+    <div><div class="eyebrow">01 · Streetwear</div><h2>Move<br>Different.</h2></div>
+    <p class="intro">Relaxed silhouettes, bold layers and everyday pieces designed to carry a message without losing the energy of the street.</p>
+  </div>
+  <div class="grid">
+    
+      <article class="card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1761167474127-1c6e596ecea6?auto=format&fit=crop&fm=jpg&q=82&w=1600" alt="Streetwear 01" loading="lazy" data-fallback="street_burgundy.jpg"></div>
+        <div class="card-meta"><span>Streetwear 01</span><strong>Message for price</strong></div>
+      </article>
+      <article class="card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1576775068668-c147f14c36f7?auto=format&fit=crop&fm=jpg&q=82&w=1600" alt="Streetwear 02" loading="lazy" data-fallback="street_green.jpg"></div>
+        <div class="card-meta"><span>Streetwear 02</span><strong>Message for price</strong></div>
+      </article>
+      <article class="card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1620442782469-4c33f8a39f44?auto=format&fit=crop&fm=jpg&q=82&w=1600" alt="Streetwear 03" loading="lazy" data-fallback="street_camo.jpg"></div>
+        <div class="card-meta"><span>Streetwear 03</span><strong>Message for price</strong></div>
+      </article>
+      <article class="card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1761167474127-1c6e596ecea6?auto=format&fit=crop&fm=jpg&q=82&w=1600" alt="Streetwear 04" loading="lazy" data-fallback="street_brown.jpg"></div>
+        <div class="card-meta"><span>Streetwear 04</span><strong>Message for price</strong></div>
+      </article>
+      <article class="card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1576775068668-c147f14c36f7?auto=format&fit=crop&fm=jpg&q=82&w=1600" alt="Streetwear 05" loading="lazy" data-fallback="street_black.jpg"></div>
+        <div class="card-meta"><span>Streetwear 05</span><strong>Message for price</strong></div>
+      </article>
+      <article class="card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1620442782469-4c33f8a39f44?auto=format&fit=crop&fm=jpg&q=82&w=1600" alt="Streetwear 06" loading="lazy" data-fallback="street_white.jpg"></div>
+        <div class="card-meta"><span>Streetwear 06</span><strong>Message for price</strong></div>
+      </article>
+  </div>
+</section>
+
+<section class="split">
+  <div class="dark"><span class="eyebrow">GOD DESIGN</span><div class="bigword">Live<br>Bold.</div><p>Faith is not hidden. Wear what you believe.</p></div>
+  <div class="lime"><span class="eyebrow">The collection</span><div class="bigword">Walk<br>Ready.</div><p>Designed for movement, presence and purpose.</p></div>
+</section>
+
+<section class="section" id="corporate">
+  <div class="section-head">
+    <div><div class="eyebrow">02 · Corporate</div><h2>Dress<br>with purpose.</h2></div>
+    <p class="intro">Suits, shirts and trousers in refined colours for meetings, events, workdays and every moment where your presence matters.</p>
+  </div>
+  <div class="grid">
+    
+      <article class="card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&fm=jpg&q=88&w=1800" alt="Office Suit 01" loading="lazy" data-fallback="suit_green.jpg"></div>
+        <div class="card-meta"><span>Office Suit 01</span><strong>Message for price</strong></div>
+      </article>
+      <article class="card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1677866140716-83167113abdb?auto=format&fit=crop&fm=jpg&q=82&w=1600" alt="Office Suit 02" loading="lazy" data-fallback="suit_navy.jpg"></div>
+        <div class="card-meta"><span>Office Suit 02</span><strong>Message for price</strong></div>
+      </article>
+      <article class="card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1785099734804-776e07cb5cf3?auto=format&fit=crop&fm=jpg&q=82&w=1600" alt="Office Suit 03" loading="lazy" data-fallback="suit_brown.jpg"></div>
+        <div class="card-meta"><span>Office Suit 03</span><strong>Message for price</strong></div>
+      </article>
+      <article class="card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1782789083007-27d93cb68a95?auto=format&fit=crop&fm=jpg&q=82&w=1600" alt="Office Suit 04" loading="lazy" data-fallback="suit_black.jpg"></div>
+        <div class="card-meta"><span>Office Suit 04</span><strong>Message for price</strong></div>
+      </article>
+      <article class="card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1774850236254-f0aa024ca20c?auto=format&fit=crop&fm=jpg&q=82&w=1600" alt="Office Suit 05" loading="lazy" data-fallback="shirt_blue.jpg"></div>
+        <div class="card-meta"><span>Office Suit 05</span><strong>Message for price</strong></div>
+      </article>
+  </div>
+</section>
+
+<section class="scripture">
+  <blockquote>“Let your light shine before others.”</blockquote>
+  <cite>Matthew 5:16</cite>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="contact-copy">
+    <div class="eyebrow">03 · Contact</div>
+    <h2>Start a conversation.</h2>
+    <p>GOD DESIGN is based in Nigeria and delivers across all 36 states. International shipping is not available yet.</p>
+    <div class="contact-list">
+      <a href="tel:08074229832">08074229832</a>
+      <a href="https://wa.me/2348074229832" target="_blank" rel="noopener">Message us on WhatsApp</a>
+      <span>Message for price.</span>
+    </div>
+  </div>
+  <form id="contactForm">
+    <input id="name" placeholder="Your name" required>
+    <input id="phone" placeholder="Phone number" required>
+    <textarea id="message" placeholder="Tell us what you want to ask about." required></textarea>
+    <button type="submit">Send on WhatsApp</button>
+  </form>
+</section>
+
+<footer>
+  <span>© GOD DESIGN</span>
+  <span>Streetwear. Corporate. Nigeria.</span>
+</footer>
+
+<script>
+const cursor=document.getElementById('cursor');
+window.addEventListener('pointermove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+document.querySelectorAll('img[data-fallback]').forEach(img=>{
+  img.addEventListener('error',()=>{img.src=img.dataset.fallback},{once:true});
+});
+
+document.getElementById('contactForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const message=document.getElementById('message').value.trim();
+  const text=`Hello GOD DESIGN. My name is ${name}. My phone number is ${phone}. ${message}`;
+  window.open('https://wa.me/2348074229832?text='+encodeURIComponent(text),'_blank');
+});
+</script>
+</body>
+</html>

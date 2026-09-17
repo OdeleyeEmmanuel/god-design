@@ -1,0 +1,6 @@
+GOD DESIGN website photography update.
+
+Office wear and streetwear imagery is sourced from Unsplash image URLs.
+Streetwear collection reference: https://unsplash.com/s/photos/streetwear
+Streetwear search results include thousands of photographs and were used as the visual direction for the expanded gallery.
+Unsplash's current API guidance recommends using its returned image URLs when displaying Unsplash photography.
