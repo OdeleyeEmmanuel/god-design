@@ -1,0 +1,19 @@
+GOD DESIGN — GITHUB PAGES UPLOAD
+
+This ZIP contains a flat website: every file is at the ZIP root. There are no folders to preserve.
+
+PHONE UPLOAD STEPS
+1. Download and extract this ZIP on your phone.
+2. Open the existing GitHub repository for the GOD DESIGN website.
+3. Choose Add file / Upload files.
+4. Select ALL extracted files together (including index.html and all PNG/JPG/SVG files). Do not upload the ZIP itself as the website.
+5. Commit the changes to the same branch currently used by GitHub Pages.
+6. Allow GitHub Pages a few minutes to redeploy.
+
+IMPORTANT
+- Upload the files into the repository root, not into a new folder.
+- Keep index.html at the repository root; it is the homepage.
+- The shop is shop.html, the cart is cart.html and checkout is checkout.html.
+- The WhatsApp destination is the same number used by the existing homepage: +234 807 422 8832.
+- Product prices and delivery charges are requested and confirmed on WhatsApp. No online payment is collected.
+- Product catalogue data is maintained manually in products.js.
